@@ -83,7 +83,8 @@ class Owner
   end
 
   def list_pets
-    fish_count = self.pets[:fishes].length
+    #fish_count = self.pets[:fishes].length
+    fish_count = self.pets.values_at(:fishes).length
     dog_count = self.pets[:dogs].length
     cat_count = self.pets[:cats].length
     "I have #{fish_count} fish, #{dog_count} dog(s), and #{cat_count} cat(s)."
